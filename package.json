@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-example",
+  "version": "1.0.0",
+  "description": "A basic nodejs project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=production node -r esm server/index.js",
+    "dev": "cross-env NODE_ENV=development node -r esm server/index.js",
+    "lint": "eslint ."
+  },
+  "author": "Minh Quan",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "esm": "^3.0.74",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}

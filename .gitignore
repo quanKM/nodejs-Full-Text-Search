@@ -1,0 +1,12 @@
+/node_modules
+/.idea
+/coverages
+.env
+.env.*
+!.env.example
+/*.log
+/.nuxt
+/.phpintel
+/.coverage
+/.build-cache
+jsconfig.json
