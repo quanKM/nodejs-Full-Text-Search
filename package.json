@@ -5,7 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env APP_ENV=production node -r esm server/index.js",
+    "start": "cross-env NODE_ENV=production node -r esm server/index.js",
     "dev": "cross-env NODE_ENV=development nodemon -r esm server/index.js",
     "lint": "eslint ."
   },
