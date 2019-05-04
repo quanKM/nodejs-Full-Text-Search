@@ -10,4 +10,4 @@
 /.coverage
 /.build-cache
 jsconfig.json
-/setup/books
+/books

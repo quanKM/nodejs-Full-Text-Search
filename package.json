@@ -7,12 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_ENV=production node -r esm server/index.js",
     "dev": "cross-env NODE_ENV=development nodemon -r esm server/index.js",
+    "format-data": "node -r esm server/format-data.js",
     "lint": "eslint ."
   },
   "author": "Minh Quan",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "change-case": "^3.1.0",
     "cross-env": "^5.2.0",
     "esm": "^3.0.74",
     "express": "^4.16.4"
