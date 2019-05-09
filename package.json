@@ -1,32 +1,29 @@
 {
-  "name": "nodejs-example",
+  "name": "nodejs-compare",
   "version": "1.0.0",
   "description": "A basic nodejs project",
   "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_ENV=production node -r esm server/index.js",
-    "dev": "cross-env NODE_ENV=development nodemon -r esm server/index.js",
+    "dev:server": "cross-env NODE_ENV=development nodemon -r esm server/index.js",
+    "dev:client": "cd app && yarn start",
+    "dev": "concurrently --kill-others-on-fail \"yarn dev:server\" \"yarn dev:client\"",
     "format-data": "node -r esm server/format-data.js",
     "main": "node -r esm server/main.js",
-    "debug": "node --nolazy --inspect-brk=9229 esm server/main.js",
     "lint": "eslint ."
   },
   "author": "Minh Quan",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "change-case": "^3.1.0",
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.0",
     "cross-env": "^5.2.0",
     "esm": "^3.0.74",
     "express": "^4.16.4",
     "lodash": "^4.17.11"
   },
   "devDependencies": {
-    "eslint": "^5.10.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
+    "eslint": "^5.16.0",
     "nodemon": "^1.18.9"
   }
 }

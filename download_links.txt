@@ -91,3 +91,10 @@ https://www.gutenberg.org/ebooks/1228.txt.utf-8
 http://www.gutenberg.org/files/1268/1268-0.txt
 http://www.gutenberg.org/ebooks/145.txt.utf-8
 http://www.gutenberg.org/files/56248/56248-0.txt
+http://www.gutenberg.org/files/59451/59451-0.txt
+http://www.gutenberg.org/files/59453/59453-0.txt
+http://www.gutenberg.org/ebooks/59447.txt.utf-8
+http://www.gutenberg.org/ebooks/59438.txt.utf-8
+http://www.gutenberg.org/files/59461/59461-0.txt
+http://www.gutenberg.org/ebooks/59456.txt.utf-8
+http://www.gutenberg.org/files/59449/59449-0.txt

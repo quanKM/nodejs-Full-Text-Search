@@ -11,3 +11,4 @@
 /.build-cache
 jsconfig.json
 /books
+/app/node_modules

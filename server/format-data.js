@@ -1,6 +1,5 @@
 import * as fs from 'fs'
 import path from 'path'
-import changeCase from 'change-case'
 
 /** Read an individual book txt file, and extract the title, author, and paragraphs */
 function formatBookFile(filePath) {
@@ -25,9 +24,11 @@ function formatBookFile(filePath) {
 
     // Clean book text and split into array of paragraphs
     const body = book
-        .slice(startOfBookIndex, endOfBookIndex) // Remove Guttenberg header and footer
+        .slice(startOfBookIndex, endOfBookIndex)
+        .replace(/^\s*\n/gm, '')
+        .slice(0, 3838 * 4)
 
-    const reNamePath = `./books/formated/${changeCase.snakeCase(title)} - ${author}.txt`
+    const reNamePath = `./books/formated/${title} by ${author}.txt`
 
     fs.writeFileSync(reNamePath, body, (err) => {
         if (err) {

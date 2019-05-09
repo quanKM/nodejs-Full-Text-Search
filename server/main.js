@@ -1,30 +1,28 @@
-import * as fs from 'fs'
-import path from 'path'
-import Tfidf from '../lib/tfidf'
+import * as fs from 'fs';
+import path from 'path';
+import Tfidf from '../lib/tfidf';
 
-const tfidf = new Tfidf()
+const tfidf = new Tfidf();
 
-function run() {
-    const files = fs.readdirSync('./books/formated')
+export default function main(input) {
+    const files = fs.readdirSync('./books/formated');
 
     // eslint-disable-next-line no-restricted-syntax
     for (const file of files) {
-        const filePath = path.join('./books/formated', file)
-        tfidf.addDocumentFile(filePath)
+        const filePath = path.join('./books/formated', file);
+        tfidf.addDocumentFile(filePath);
     }
 
     fs.writeFileSync(
         './books/data/count-word.txt',
         JSON.stringify(tfidf.showDocuments()),
-        (err) => {
+        err => {
             if (err) {
                 // eslint-disable-next-line no-console
-                console.error(err)
+                console.error(err);
             }
         }
-    )
+    );
 
-    tfidf.run('')
+    return tfidf.run(input);
 }
-
-run()
