@@ -24,8 +24,8 @@ class InputForm extends PureComponent {
             <div>
                 <TextArea
                     className="input"
-                    placeholder="Nhập đoạn văn"
-                    rows={25}
+                    placeholder="Nhập đoạn văn cần tìm kiếm"
+                    rows={20}
                     value={this.state.inputValue}
                     onChange={this.handleInputChange}
                 />
@@ -36,7 +36,7 @@ class InputForm extends PureComponent {
                     loading={this.state.loading}
                     onClick={this.handleSubmit}
                 >
-                    Search
+                    Tìm kiếm
                 </Button>
             </div>
         );
