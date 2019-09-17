@@ -20,7 +20,7 @@
     "cross-env": "^5.2.0",
     "esm": "^3.0.74",
     "express": "^4.16.4",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.13"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
